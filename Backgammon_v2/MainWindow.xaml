@@ -1,0 +1,59 @@
+﻿<Window x:Class="Backgammon_v2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Backgammon_v2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="820" Width="1000"
+        Loaded="MainWindow_OnLoaded">
+    <Window.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="4"
+                    BorderBrush="Blue"
+                    Grid.Row="0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="0" x:Name="TextCube1"/>
+                    <Label Content="0" x:Name="TextCube2"/>
+                    <Button Content="Role cubes"
+                            Click="Cubes_Clicked"/>
+                    <Label Content="Left turns: " x:Name="LeftTurns" FontWeight="Bold" />
+                    <Label Content="Eaten whites: " x:Name="EatenWhites" FontWeight="Bold" />
+                    <Label Content="Eaten blacks: " x:Name="EatenBlacks" FontWeight="Bold"/>
+                    <Label Content="Whites Out: " x:Name="WhitesOut" FontWeight="Bold"/>
+                    <Label Content="Blacks Out: " x:Name="BlacksOut" FontWeight="Bold"/>
+                    <Label x:Name="Turn" FontWeight="Bold" />
+                </StackPanel>
+            </Border>
+            <Grid x:Name="BoardGrid" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="6"
+                       Background="Black"/>
+
+            </Grid>
+        </Grid>
+    </Window.Content>
+</Window>
